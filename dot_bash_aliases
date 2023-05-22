@@ -7,8 +7,11 @@ DFI="IMAGE\t{{.Repository}}\nSIZE\t{{.Size}}\nCREATED\t{{.CreatedSince}}\n"
 #Alias docker
 alias dcf='docker ps -a --format "$DFC"'
 alias dif='docker images --format "$DFI"'
-alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean && sudo apt clean"
 
 #Alias sandbox
 alias sandboxu="docker run -it --name sandbox --rm jkarlozdhub/sandbox:ubuntu"
 alias sandboxa="dcoker run -it --name sandbox2 --rm jkarlozhub/sandbox2:alpine"
+
+#Alias Ubuntu
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean && sudo apt clean"
+alias cat="batcat"
