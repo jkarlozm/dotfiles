@@ -15,3 +15,5 @@ alias sandboxa="dcoker run -it --name sandbox2 --rm jkarlozhub/sandbox2:alpine"
 #Alias Ubuntu
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean && sudo apt clean"
 alias cat="batcat"
+alias ls="exa --icons --header --long -g -H"
+alias tree="exa -T --icons"
