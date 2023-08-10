@@ -18,3 +18,5 @@ alias cat="batcat"
 alias ls="exa --icons"
 alias ll="exa --icons --header --long -g -H"
 alias tree="exa -T --icons -L"
+#Conexion ssh comprimida (-C), muestra detalles de conexion (-v)
+alias ssh="ssh -vC"
