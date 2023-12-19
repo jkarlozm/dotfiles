@@ -20,6 +20,7 @@ alias ll="exa --icons --header --long -g -H"
 alias tree="exa -T --icons -L"
 #Conexion ssh comprimida (-C), muestra detalles de conexion (-v)
 alias ssh="ssh -vC"
-alias dockerserver="ssh dockerserver -p 22"
+alias dockerserver="ssh dockerserver"
 alias cloudDocker="ssh cloudDocker"
 alias proxmox.srv="ssh proxmox.srv"
+alias laptop="ssh laptop"
