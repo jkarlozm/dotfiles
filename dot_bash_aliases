@@ -24,3 +24,6 @@ alias dockerserver="ssh dockerserver"
 alias cloudDocker="ssh cloudDocker"
 alias proxmox.srv="ssh proxmox.srv"
 alias laptop="ssh laptop"
+
+#Comandos proxmox
+alias ppoc='sudo pct shutdown 100'
