@@ -9,6 +9,27 @@ alias dcf='docker ps -a --format "$DFC"'
 alias dif='docker images --format "$DFI"'
 alias oxker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock:ro --pull=always mrjackwills/oxker'
 
+dcfs(){
+if [ -z "$1" ]; then
+echo "Error: debes proporcionar un argumento."
+return 1
+fi
+dcf --filter name="$1"
+}
+
+#Alias para respaldar una base de datos almacenada en un contenedor docker.
+backupdb(){
+if [ -z "$1" ]; then
+echo "Error: Debes proporcinar un argunmento."
+return 1
+fi
+local passw="$1"
+local fecha=$(date +'%Y%m%d_%H%M%S')
+local archivo="backupdb_${fecha}.sql"
+docker exec -it wikidb bash -c "mysqldump -uroot -p${passw}  memos_db" > "${archivo}"
+echo "Respaldo creado: ${archivo}"
+}
+
 #Alias sandbox
 alias sandboxu="docker run -it --name sandbox --rm jkarlozdhub/sandbox:ubuntu"
 alias sandboxa="dcoker run -it --name sandbox2 --rm jkarlozhub/sandbox2:alpine"
