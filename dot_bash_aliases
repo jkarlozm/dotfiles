@@ -7,6 +7,7 @@ DFI="IMAGE\t{{.Repository}}\nSIZE\t{{.Size}}\nCREATED\t{{.CreatedSince}}\n"
 #Alias docker
 alias dcf='docker ps -a --format "$DFC"'
 alias dif='docker images --format "$DFI"'
+alias oxker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock:ro --pull=always mrjackwills/oxker'
 
 #Alias sandbox
 alias sandboxu="docker run -it --name sandbox --rm jkarlozdhub/sandbox:ubuntu"
